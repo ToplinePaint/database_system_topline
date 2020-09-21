@@ -35,8 +35,10 @@ namespace database_app_test
         }
         private void PopError(ComboBox cb)
         {
-            cb.Items.Insert(0, "Population Error: No items found in the Database. " +
-                "Please contact an admin");
+            cb.Items.Insert(0, "" +
+                "Population Error: No items found in the Database. " +
+                "Please contact an admin!" +
+                "");
             cb.SelectedIndex = 0;
         }
 
@@ -54,9 +56,10 @@ namespace database_app_test
         {
             //Join the supplier and SupCode fields
             Access.ExecQuery(""+
-                "SELECT Raw.supplier, Supplier.SupName " +
+                "SELECT DISTINCT Raw.supplier, Supplier.SupName, Raw.material " +
                 "FROM Raw " +
-                "INNER JOIN Supplier ON Raw.supplier = Supplier.SupCode");
+                "INNER JOIN Raw ON Raw.supplier = Supplier.SupCode" +
+                "");//needs to be ordered
 
             //annoying as f*** beep to say that its done da thing
             //replaced with annoying af msg box
@@ -64,7 +67,7 @@ namespace database_app_test
 
             //populate the cbx with rm_name entries where applicable
             foreach (DataRow row in Access.dbdt.Rows)
-                cbxMaterial.Items.Add(row["SupName"]);
+                cbxMaterial.Items.Add(row["material"]);
 
             //prevent clickthroughs
             if (cbxMaterial.Items.Count <= 1)
@@ -76,8 +79,9 @@ namespace database_app_test
         //if the cbxSupp is changed
         private void cbxSupplier_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbxSupplier.SelectedIndex == 0)
+            if (cbxSupplier.SelectedIndex == 0) {
                 cbxMaterial.Enabled = false;
+            }
             else
             {
                 matSupplier = cbxSupplier.Text;

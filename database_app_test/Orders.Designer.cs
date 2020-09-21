@@ -37,7 +37,8 @@
             this.cbxMaterial = new System.Windows.Forms.ComboBox();
             this.orderslabel3 = new System.Windows.Forms.Label();
             this.orderslabel4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.stockAmount = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.orderViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,12 +145,24 @@
             this.orderslabel4.TabIndex = 10;
             this.orderslabel4.Text = "Order Notes";
             // 
-            // dateTimePicker1
+            // stockAmount
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 130);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.stockAmount.Location = new System.Drawing.Point(251, 100);
+            this.stockAmount.MaxLength = 5;
+            this.stockAmount.Name = "stockAmount";
+            this.stockAmount.ReadOnly = true;
+            this.stockAmount.Size = new System.Drawing.Size(32, 20);
+            this.stockAmount.TabIndex = 11;
+            this.stockAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(162, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Amount in Stock:";
             // 
             // Orders
             // 
@@ -157,7 +170,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(153)))), ((int)(((byte)(174)))));
             this.ClientSize = new System.Drawing.Size(550, 450);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.stockAmount);
             this.Controls.Add(this.orderslabel4);
             this.Controls.Add(this.orderslabel3);
             this.Controls.Add(this.cbxMaterial);
@@ -188,6 +202,7 @@
         private System.Windows.Forms.ComboBox cbxMaterial;
         private System.Windows.Forms.Label orderslabel3;
         private System.Windows.Forms.Label orderslabel4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox stockAmount;
+        private System.Windows.Forms.Label label1;
     }
 }

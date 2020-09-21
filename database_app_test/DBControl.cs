@@ -11,7 +11,6 @@ namespace database_app_test
 {
     public class DBControl
     {
-        //its like caaan I get a connection
         private OleDbConnection dbconn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Paint-2020-Raw-Materials-copy-for-Josh.mdb");
 
         //cmd inputs
@@ -26,13 +25,16 @@ namespace database_app_test
 
         //query stats
         public int recordCount;
+        //when things break, they are listed here
         public string exceptions;
 
         public void ExecQuery(string Query)
         {
+            //reset vars for each query
             recordCount = 0;
             exceptions = "";
 
+            //do this async to wait for the db
             try
             {
                 //open connection to db
@@ -42,7 +44,7 @@ namespace database_app_test
                 dbcmd = new OleDbCommand(Query, dbconn);
 
                 //load params
-                foreach (OleDbParameter p in listParams) 
+                foreach (OleDbParameter p in listParams)
                     dbcmd.Parameters.Add(p);
 
                 //clear params
@@ -54,10 +56,11 @@ namespace database_app_test
 
                 recordCount = dbda.Fill(dbdt);
             }
-            catch (Exception err) 
+            catch (Exception err)
             {
+                //exception handling for when queries go wrong
                 exceptions = err.Message;
-            } 
+            }
 
             //close connection
             if (dbconn.State == ConnectionState.Open)
