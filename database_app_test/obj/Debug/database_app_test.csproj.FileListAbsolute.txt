@@ -1,0 +1,17 @@
+D:\Users\joshh\source\repos\database_app_test\database_app_test\bin\Debug\Paint-2020-Raw-Materials-copy-for-Josh.mdb
+D:\Users\joshh\source\repos\database_app_test\database_app_test\bin\Debug\database_app_test.exe.config
+D:\Users\joshh\source\repos\database_app_test\database_app_test\bin\Debug\database_app_test.exe
+D:\Users\joshh\source\repos\database_app_test\database_app_test\bin\Debug\database_app_test.pdb
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.csprojAssemblyReference.cache
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.Properties.Resources.resources
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.csproj.GenerateResource.cache
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.csproj.CoreCompileInputs.cache
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.exe
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.pdb
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.MainForm.resources
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.StyleForm.resources
+D:\Users\joshh\source\repos\database_app_test\database_app_test\bin\Debug\FontAwesome.Sharp.dll
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.csproj.CopyComplete
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.Ordering.resources
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.Old.Home.resources
+D:\Users\joshh\source\repos\database_app_test\database_app_test\obj\Debug\database_app_test.Orders.resources
